@@ -1,0 +1,14 @@
+*.tar.gz
+*.tar.xz
+*.zip
+*.img
+*.iso
+
+.env
+
+**/build/**
+**/out/**
+**/tmp/**
+**/.cache/**
+
+.gdb_history

@@ -1,0 +1,19 @@
+services:
+  ctf:
+    build: .
+
+    container_name: ctf
+
+    volumes:
+      - .:/workspace
+
+    working_dir: /workspace
+
+    stdin_open: true
+    tty: true
+    init: true
+
+    pid: host
+
+    cap_add:
+      - SYS_PTRACE
