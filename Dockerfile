@@ -53,6 +53,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tree \
     unzip \
     eza \
+    bubblewrap \
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -158,7 +159,7 @@ RUN git clone --depth=1 \
 RUN git clone --depth=1 \
         https://github.com/radareorg/radare2.git \
         /tmp/radare2 \
-    && /tmp/radare2/sys/install.sh \
+    && /tmp/radare2/sys/install.sh --install \
     && rm -rf /tmp/radare2
 
 RUN r2pm -U \
